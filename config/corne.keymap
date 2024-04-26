@@ -13,7 +13,7 @@
 #define TWO   2
 #define THREE 3
 
-{
+/ {
   behaviors {
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
