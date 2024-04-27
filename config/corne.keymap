@@ -45,7 +45,7 @@
             >;
         };
 
-        Raise {
+        raise {
             //--------------------------------------------------------------------------------------------------------------
             // |      | [          |  {         | }          | ]          |     | ## |     7 |    8 |    9 |     & | * | + |
             // |      | LSHIFT     |  LC (      | LA )       |  LGUI      |     | ## | RG  4 | RA 5 | RC 6 |  RS $ | % | ^ |
@@ -57,11 +57,11 @@
 &kp LEFT_PARENTHESIS  &kp LBKT          &kp LBRC       &kp RBRC        &kp RBKT             &kp RIGHT_PARENTHESIS    &kp N7        &kp N8        &kp N9         &kp N0              &trans  &trans
 &trans                &bhm LSHIFT LEFT  &bhm LCTRL UP  &bhm LALT DOWN  &bhm LEFT_GUI RIGHT  &trans                   &bhm RGUI N4  &bhm RALT N5  &bhm RCTRL N6  &bhm RSHIFT DOLLAR  &trans  &kp GRAVE
 &sk LC(LA(LSHIFT))    &kp HOME          &kp PG_UP      &kp PAGE_DOWN   &kp END              &trans                   &kp N1        &kp N2        &kp N3         &kp RS(RA(N2))      &trans  &kp BACKSLASH
-                                                       &trans          &trans               &kp DELETE               &kp PG_DN     &kp END       &trans
+                                                       &trans          &trans               &kp DELETE               &trans        &trans        &trans
             >;
         };
 
-        F-Vim {
+        fvim {
             bindings = <
 &trans  &trans         &trans               &trans       &trans       &trans    &kp F7        &kp F8        &kp F9         &kp F10         &trans  &trans
 &trans  &bhm LSHIFT H  &bhm LEFT_CONTROL J  &bhm LALT K  &bhm LGUI L  &trans    &bhm RGUI F4  &bhm RALT F5  &bhm RCTRL F6  &bhm RSHFT F11  &trans  &trans
@@ -70,7 +70,7 @@
             >;
         };
 
-        Media {
+        media {
             bindings = <
 &kp C_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP  &trans        &trans        &trans          &bl BL_TOG       &bl BL_CYCLE     &trans           &trans           &trans  &trans
 &kp C_PLAY_PAUSE  &kp C_PREV    &kp C_NEXT       &trans        &trans        &trans          &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans  &trans
