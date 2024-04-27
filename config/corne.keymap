@@ -30,7 +30,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        dvk_layer {
+        dvk {
             // --------------------------------------------------------------------------------------------------------------
             // |  ESC |  '      |  ,<     |  .>     |  P      |  Y  | ## |  F  |  G       |  C      |  R      |  L      | =+  |
             // |  TAB |  LS(A)  |  LC(O)  |  LA(E)  |  LG(U)  |  I  | ## |  D  |  RG(H)   |  RA(T)  |  RC(N)  |  RS(S)  | -_  |
@@ -61,12 +61,12 @@
             >;
         };
 
-        F-Keys {
+        F-Vim {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp F7        &kp F8        &kp F9         &kp F10         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &bhm RGUI F4  &bhm RALT F5  &bhm RCTRL F6  &bhm RSHFT F11  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp F1        &kp F2        &kp F3         &kp F12         &trans  &trans
-                        &trans  &trans  &trans    &trans        &trans        &trans
+&trans  &trans         &trans               &trans       &trans       &trans    &kp F7        &kp F8        &kp F9         &kp F10         &trans  &trans
+&trans  &bhm LSHIFT H  &bhm LEFT_CONTROL J  &bhm LALT K  &bhm LGUI L  &trans    &bhm RGUI F4  &bhm RALT F5  &bhm RCTRL F6  &bhm RSHFT F11  &trans  &trans
+&trans  &trans         &trans               &trans       &trans       &trans    &kp F1        &kp F2        &kp F3         &kp F12         &trans  &trans
+                                            &trans       &trans       &trans    &trans        &trans        &trans
             >;
         };
 
