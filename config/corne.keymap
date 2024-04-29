@@ -38,10 +38,10 @@
             //                            | MO(2)   | MO(1)   | BSP | ## | ENT |  SPC     | MO(3)   |
 
             bindings = <
-&kp ESC       &kp SQT        &kp COMMA     &kp DOT      &kp P        &kp Y            &kp F      &kp G        &kp C        &kp R         &kp L          &kp EQUAL
-&kp TAB       &bhm LSHIFT A  &bhm LCTRL O  &bhm LALT E  &bhm LGUI U  &kp I            &kp D      &bhm RGUI H  &bhm RALT T  &bhm RCTRL N  &bhm RSHIFT S  &kp MINUS
-&kp LC(LALT)  &kp SEMI       &kp Q         &kp J        &kp K        &kp X            &kp B      &kp M        &kp W        &kp V         &kp Z          &kp SLASH
-                                           &mo 3        &mo 2        &kp BACKSPACE    &kp SPACE  &kp ENTER    &mo 1
+&kp ESC       &kp SQT        &kp COMMA     &kp DOT      &kp P          &kp Y    &kp F      &kp G        &kp C        &kp R         &kp L          &kp EQUAL
+&kp TAB       &bhm LSHIFT A  &bhm LCTRL O  &bhm LALT E  &bhm LGUI U    &kp I    &kp D      &bhm RGUI H  &bhm RALT T  &bhm RCTRL N  &bhm RSHIFT S  &kp MINUS
+&kp LC(LALT)  &kp SEMI       &kp Q         &kp J        &kp K          &kp X    &kp B      &kp M        &kp W        &kp V         &kp Z          &kp SLASH
+                                           &mo 3        &kp BACKSPACE  &mo 2    &kp ENTER  &kp SPACE    &mo 1
             >;
         };
 
@@ -57,7 +57,7 @@
 &kp LEFT_PARENTHESIS  &kp LBKT          &kp LBRC       &kp RBRC        &kp RBKT             &kp RIGHT_PARENTHESIS    &kp N7        &kp N8        &kp N9         &kp N0              &trans  &trans
 &trans                &bhm LSHIFT LEFT  &bhm LCTRL UP  &bhm LALT DOWN  &bhm LEFT_GUI RIGHT  &trans                   &bhm RGUI N4  &bhm RALT N5  &bhm RCTRL N6  &bhm RSHIFT DOLLAR  &trans  &kp GRAVE
 &sk LC(LA(LSHIFT))    &kp HOME          &kp PG_UP      &kp PAGE_DOWN   &kp END              &trans                   &kp N1        &kp N2        &kp N3         &kp RS(RA(N2))      &trans  &kp BACKSLASH
-                                                       &trans          &trans               &kp DELETE               &trans        &trans        &trans
+                                                       &trans          &kp DELETE           &trans                   &trans        &trans        &trans
             >;
         };
 
