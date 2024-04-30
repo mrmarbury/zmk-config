@@ -83,7 +83,7 @@
 
         rsthd {
             bindings = <
-&kp ESC       &kp J          &kp C         &kp Y        &kp F        &kp K            &kp G      &kp G        &kp COMMA    &kp U          &kp Q          &kp EQUAL
+&kp ESC       &kp J          &kp C         &kp Y        &kp F        &kp K            &kp G      &kp L        &kp COMMA    &kp U          &kp Q          &kp EQUAL
 &kp TAB       &bhm LSHIFT R  &bhm LCTRL S  &bhm LALT T  &bhm LGUI H  &kp D            &kp M      &bhm RGUI N  &bhm RALT A  &bhm RCTRL I   &bhm RSHIFT O  &kp SQT
 &kp LC(LALT)  &kp SLASH      &kp V         &kp Z        &kp P        &kp B            &kp X      &kp W        &kp PERIOD   &kp SEMICOLON  &kp MINUS      &mo 3
                                            &mo 1        &kp E        &kp BACKSPACE    &kp ENTER  &kp SPACE    &mo 2
