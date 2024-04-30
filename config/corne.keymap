@@ -15,9 +15,7 @@
 #define TWO   2
 #define THREE 3
 
-&led_strip {
-    chain-length = <27>;
-};
+&led_strip { chain-length = <27>; };
 
 / {
     behaviors {
@@ -60,8 +58,8 @@
             bindings = <
 &kp LEFT_PARENTHESIS  &kp LBKT          &kp LBRC       &kp RBRC        &kp RBKT             &kp RIGHT_PARENTHESIS    &kp N7        &kp N8        &kp N9         &kp N0              &trans  &trans
 &trans                &bhm LSHIFT LEFT  &bhm LCTRL UP  &bhm LALT DOWN  &bhm LEFT_GUI RIGHT  &trans                   &bhm RGUI N4  &bhm RALT N5  &bhm RCTRL N6  &bhm RSHIFT DOLLAR  &trans  &kp GRAVE
-&sk LC(LA(LSHIFT))    &kp HOME          &kp PG_UP      &kp PAGE_DOWN   &kp END              &trans                   &kp N1        &kp N2        &kp N3         &kp RS(RA(N2))      &trans  &kp BACKSLASH
-                                                       &trans          &kp DELETE           &trans                   &trans        &trans        &trans
+&sk LC(LA(LSHIFT))    &kp HOME          &kp PG_UP      &kp PAGE_DOWN   &kp END              &trans                   &kp N1        &kp N2        &kp N3         &kp RS(RA(N2))      &trans  &kp NON_US_BACKSLASH
+                                                       &trans          &kp DELETE           &kp DELETE               &trans        &trans        &trans
             >;
         };
 
@@ -78,8 +76,17 @@
             bindings = <
 &trans      &kp C_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP  &trans        &trans          &bl BL_TOG                         &bl BL_CYCLE                       &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI
 &trans      &kp C_PLAY_PAUSE  &kp C_PREV    &kp C_NEXT       &trans        &trans          &rgb_ug RGB_TOG                    &rgb_ug RGB_COLOR_HSB(119,100,50)  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_COLOR_HSB(194,100,50)  &rgb_ug RGB_COLOR_HSB(183,0,100)   &trans           &trans           &trans           &trans
+&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_COLOR_HSB(194,100,50)  &rgb_ug RGB_COLOR_HSB(183,0,100)   &trans           &trans           &tog 0           &tog 4
                                             &trans           &trans        &trans          &trans                             &trans                             &trans
+            >;
+        };
+
+        rsthd {
+            bindings = <
+&kp ESC       &kp J          &kp C         &kp Y        &kp F        &kp K            &kp G      &kp G        &kp COMMA    &kp U          &kp Q          &kp EQUAL
+&kp TAB       &bhm LSHIFT R  &bhm LCTRL S  &bhm LALT T  &bhm LGUI H  &kp D            &kp M      &bhm RGUI N  &bhm RALT A  &bhm RCTRL I   &bhm RSHIFT O  &kp SQT
+&kp LC(LALT)  &kp SLASH      &kp V         &kp Z        &kp P        &kp B            &kp X      &kp W        &kp PERIOD   &kp SEMICOLON  &kp MINUS      &mo 3
+                                           &mo 1        &kp E        &kp BACKSPACE    &kp ENTER  &kp SPACE    &mo 2
             >;
         };
     };
