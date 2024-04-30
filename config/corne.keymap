@@ -14,11 +14,11 @@
 #define TWO   2
 #define THREE 3
 
-&led_strip {
-    chain-length = <27>;
-};
-
 / {
+    &led_strip {
+        chain-length = <27>;
+    };
+
     behaviors {
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
