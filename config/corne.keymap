@@ -47,7 +47,7 @@
             >;
         };
 
-        raise {
+        fnums {
             //--------------------------------------------------------------------------------------------------------------
             // |      | [          |  {         | }          | ]          |     | ## |     7 |    8 |    9 |     & | * | + |
             // |      | LSHIFT     |  LC (      | LA )       |  LGUI      |     | ## | RG  4 | RA 5 | RC 6 |  RS $ | % | ^ |
@@ -56,19 +56,19 @@
             //                                  |            |            |     | ## |       |      |      | 
 
             bindings = <
-&kp LEFT_PARENTHESIS  &kp LBKT          &kp LBRC       &kp RBRC        &kp RBKT             &kp RIGHT_PARENTHESIS    &kp N7        &kp N8        &kp N9         &kp N0              &trans  &trans
-&trans                &bhm LSHIFT LEFT  &bhm LCTRL UP  &bhm LALT DOWN  &bhm LEFT_GUI RIGHT  &trans                   &bhm RGUI N4  &bhm RALT N5  &bhm RCTRL N6  &bhm RSHIFT DOLLAR  &trans  &kp GRAVE
-&sk LC(LA(LSHIFT))    &kp HOME          &kp PG_UP      &kp PAGE_DOWN   &kp END              &trans                   &kp N1        &kp N2        &kp N3         &kp RS(RA(N2))      &trans  &kp NON_US_BACKSLASH
-                                                       &trans          &kp DELETE           &trans                   &trans        &trans        &trans
+&trans              &kp F1          &kp F2         &kp F3        &kp F4            &kp F5     &kp N7        &kp N8        &kp N9         &kp N0              &trans  &trans
+&trans              &bhm LSHIFT F6  &bhm LCTRL F7  &bhm LALT F8  &bhm LEFT_GUI F9  &kp F10    &bhm RGUI N4  &bhm RALT N5  &bhm RCTRL N6  &bhm RSHIFT DOLLAR  &trans  &kp GRAVE
+&sk LC(LA(LSHIFT))  &kp F11         &kp F12        &kp F13       &kp F14           &kp F15    &kp N1        &kp N2        &kp N3         &kp RS(RA(N2))      &trans  &kp NON_US_BACKSLASH
+                                                   &trans        &kp DELETE        &trans     &trans        &trans        &trans
             >;
         };
 
-        fvim {
+        movpar {
             bindings = <
-&trans  &trans         &trans               &trans       &trans       &trans    &kp F7        &kp F8        &kp F9         &kp F10         &trans  &trans
-&trans  &bhm LSHIFT H  &bhm LEFT_CONTROL J  &bhm LALT K  &bhm LGUI L  &trans    &bhm RGUI F4  &bhm RALT F5  &bhm RCTRL F6  &bhm RSHFT F11  &trans  &trans
-&trans  &trans         &trans               &trans       &trans       &trans    &kp F1        &kp F2        &kp F3         &kp F12         &trans  &trans
-                                            &trans       &trans       &trans    &trans        &trans        &trans
+&trans  &kp LEFT_ARROW    &kp UP_ARROW             &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans    &trans        &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &trans  &trans
+&trans  &bhm LSHIFT HOME  &bhm LEFT_CONTROL PG_UP  &bhm LALT PAGE_DOWN  &bhm LGUI END    &trans    &bhm RGUI F4  &bhm RALT F5       &bhm RCTRL F6    &bhm RSHFT F11         &trans  &trans
+&trans  &kp H             &kp J                    &kp K                &kp L            &trans    &trans        &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &trans  &trans
+                                                   &trans               &trans           &trans    &trans        &trans             &trans
             >;
         };
 
