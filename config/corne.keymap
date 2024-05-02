@@ -27,6 +27,13 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
+        tdmod: tdmod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDMOD";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LALT)>, <&kp LC(LA(LSHFT))>;
+        };
     };
 
     keymap {
@@ -40,10 +47,10 @@
             //                            | MO(2)   | MO(1)   | BSP | ## | ENT |  SPC     | MO(3)   |
 
             bindings = <
-&kp ESC       &kp J          &kp C         &kp Y        &kp F        &kp K            &kp G      &kp L        &kp COMMA    &kp U         &kp Q          &kp EQUAL
-&kp TAB       &bhm LSHIFT R  &bhm LCTRL S  &bhm LALT T  &bhm LGUI H  &kp D            &kp M      &bhm RGUI N  &bhm RALT A  &bhm RCTRL I  &bhm RSHIFT O  &kp MINUS
-&kp LC(LALT)  &kp SEMICOLON  &kp V         &kp Z        &kp P        &kp B            &kp X      &kp W        &kp PERIOD   &kp SLASH     &kp SQT        &mo 3
-                                           &mo 1        &kp E        &kp BACKSPACE    &kp ENTER  &kp SPACE    &mo 2
+&kp ESC  &kp J          &kp C         &kp Y        &kp F        &kp K            &kp G      &kp L        &kp COMMA    &kp U         &kp Q          &kp EQUAL
+&kp TAB  &bhm LSHIFT R  &bhm LCTRL S  &bhm LALT T  &bhm LGUI H  &kp D            &kp M      &bhm RGUI N  &bhm RALT A  &bhm RCTRL I  &bhm RSHIFT O  &kp MINUS
+&tdmod   &kp SEMICOLON  &kp V         &kp Z        &kp P        &kp B            &kp X      &kp W        &kp PERIOD   &kp SLASH     &kp SQT        &mo 3
+                                      &mo 1        &kp E        &kp BACKSPACE    &kp ENTER  &kp SPACE    &mo 2
             >;
         };
 
@@ -56,10 +63,10 @@
             //                                  |            |            |     | ## |       |      |      | 
 
             bindings = <
-&trans              &kp F1          &kp F2         &kp F3        &kp F4            &kp F5        &kp N7        &kp N8        &kp N9         &kp N0              &trans     &trans
-&trans              &bhm LSHIFT F6  &bhm LCTRL F7  &bhm LALT F8  &bhm LEFT_GUI F9  &kp F10       &bhm RGUI N4  &bhm RALT N5  &bhm RCTRL N6  &bhm RSHIFT DOLLAR  &trans     &trans
-&sk LC(LA(LSHIFT))  &kp F11         &kp F12        &kp F13       &kp F14           &kp F15       &kp N1        &kp N2        &kp N3         &kp NON_US_BSLH     &kp GRAVE  &trans
-                                                   &trans        &trans            &kp DELETE    &trans        &trans        &trans
+&trans  &kp F1          &kp F2         &kp F3        &kp F4            &kp F5        &kp N7        &kp N8        &kp N9         &kp N0              &trans     &trans
+&trans  &bhm LSHIFT F6  &bhm LCTRL F7  &bhm LALT F8  &bhm LEFT_GUI F9  &kp F10       &bhm RGUI N4  &bhm RALT N5  &bhm RCTRL N6  &bhm RSHIFT DOLLAR  &trans     &trans
+&trans  &kp F11         &kp F12        &kp F13       &kp F14           &kp F15       &kp N1        &kp N2        &kp N3         &kp NON_US_BSLH     &kp GRAVE  &trans
+                                       &trans        &trans            &kp DELETE    &trans        &trans        &trans
             >;
         };
 
