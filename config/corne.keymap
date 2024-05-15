@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
@@ -82,8 +81,8 @@
 
         media {
             bindings = <
-&soft_off   &kp C_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP  &trans        &ext_power EP_TOG    &bl BL_TOG                         &bl BL_CYCLE                       &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI
-&trans      &kp C_PLAY_PAUSE  &kp C_PREV    &kp C_NEXT       &trans        &trans               &rgb_ug RGB_TOG                    &rgb_ug RGB_COLOR_HSB(119,100,50)  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD
+&soft_off   &kp C_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP  &trans        &ext_power EP_TOG    &rgb_ug RGB_TOG                    &trans                             &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI
+&trans      &kp C_PLAY_PAUSE  &kp C_PREV    &kp C_NEXT       &trans        &trans               &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_COLOR_HSB(119,100,50)  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD
 &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4         &rgb_ug RGB_COLOR_HSB(194,100,50)  &rgb_ug RGB_COLOR_HSB(189,0,100)   &trans           &trans           &trans           &trans
                                             &trans           &trans        &trans               &trans                             &trans                             &trans
             >;
