@@ -47,7 +47,7 @@
             //                            | MO(2)   | MO(1)   | BSP | ## | ENT |  SPC     | MO(3)   |
 
             bindings = <
-&kp ESC  &kp SINGLE_QUOTE  &kp COMMA     &kp PERIOD   &kp P        &kp K            &kp F      &kp G        &kp C        &kp R         &kp L          &kp EQUAL
+&kp ESC  &kp SINGLE_QUOTE  &kp COMMA     &kp PERIOD   &kp P        &kp Y            &kp F      &kp G        &kp C        &kp R         &kp L          &kp EQUAL
 &kp TAB  &bhm LSHIFT A     &bhm LCTRL O  &bhm LALT E  &bhm LGUI U  &kp I            &kp D      &bhm RGUI H  &bhm RALT T  &bhm RCTRL N  &bhm RSHIFT S  &kp MINUS
 &tdmod   &kp SEMICOLON     &kp Q         &kp J        &kp K        &kp X            &kp B      &kp M        &kp W        &kp V         &kp Z          &kp SLASH
                                          &mo 1        &mo 2        &kp BACKSPACE    &kp ENTER  &kp SPACE    &mo 3
