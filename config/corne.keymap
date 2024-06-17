@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define DVK 0
@@ -54,7 +55,7 @@
             >;
         };
 
-        fnums {
+        paren_nums {
             //--------------------------------------------------------------------------------------------------------------
             // |      | [          |  {         | }          | ]          |     | ## |     7 |    8 |    9 |     & | * | + |
             // |      | LSHIFT     |  LC (      | LA )       |  LGUI      |     | ## | RG  4 | RA 5 | RC 6 |  RS $ | % | ^ |
@@ -63,19 +64,19 @@
             //                                  |            |            |     | ## |       |      |      | 
 
             bindings = <
-&trans  &kp F1          &kp F2         &kp F3        &kp F4            &kp F5     &kp N7        &kp N8        &kp N9         &kp N0              &trans                &trans
-&trans  &bhm LSHIFT F6  &bhm LCTRL F7  &bhm LALT F8  &bhm LEFT_GUI F9  &kp F10    &bhm RGUI N4  &bhm RALT N5  &bhm RCTRL N6  &bhm RSHIFT DOLLAR  &kp LS(LA(NUMBER_2))  &kp GRAVE
-&trans  &kp F11         &kp F12        &kp F13       &kp F14           &kp F15    &kp N1        &kp N2        &kp N3         &kp COLON           &trans                &kp BACKSLASH
-                                       &trans        &trans            &trans     &trans        &trans        &trans
+&trans  &trans      &trans                 &trans                 &trans        &trans    &kp N7        &kp N8        &kp N9         &kp N0              &trans                &trans
+&trans  &kp LSHIFT  &bhm LCTRL LEFT_BRACE  &bhm LALT RIGHT_BRACE  &kp LEFT_GUI  &trans    &bhm RGUI N4  &bhm RALT N5  &bhm RCTRL N6  &bhm RSHIFT DOLLAR  &kp LS(LA(NUMBER_2))  &kp GRAVE
+&trans  &trans      &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans        &trans    &kp N1        &kp N2        &kp N3         &trans              &trans                &kp BACKSLASH
+                                           &trans                 &trans        &trans    &trans        &trans        &trans
             >;
         };
 
-        movpar {
+        fmov {
             bindings = <
-&trans  &kp LEFT_ARROW    &kp DOWN_ARROW               &kp UP_ARROW     &kp RIGHT_ARROW  &trans    &kp LESS_THAN     &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &trans  &kp LS(LA(NUMBER_2))
-&trans  &bhm LSHIFT HOME  &bhm LEFT_CONTROL PAGE_DOWN  &bhm LALT PG_UP  &bhm LGUI END    &trans    &bhm RGUI F4      &bhm RALT F5       &bhm RCTRL F6    &bhm RSHFT F11         &trans  &trans
-&trans  &kp H             &kp J                        &kp K            &kp L            &trans    &kp GREATER_THAN  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &trans  &trans
-                                                       &trans           &trans           &trans    &trans            &trans             &trans
+&trans  &kp LEFT_ARROW    &kp UP_ARROW             &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans    &kt F1        &kp F2        &kp F3         &kp F4          &kp F5   &kp F6
+&trans  &bhm LSHIFT HOME  &bhm LEFT_CONTROL PG_UP  &bhm LALT PAGE_DOWN  &bhm LGUI END    &trans    &bhm RGUI F7  &bhm RALT F8  &bhm RCTRL F9  &bhm RSHFT F10  &kp F11  &kp F12
+&trans  &kp H             &kp K                    &kp J                &kp L            &trans    &kp F13       &kp F14       &kp F15        &kp F16         &kp F17  &kp F18
+                                                   &trans               &trans           &trans    &trans        &trans        &trans
             >;
         };
 
