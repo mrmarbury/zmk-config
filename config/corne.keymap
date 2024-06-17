@@ -37,6 +37,78 @@
         };
     };
 
+    macros {
+        vim_save_all: vim_save_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp COLON &kp W &kp A &kp EXCL &kp RS(ENTER)>;
+            label = "VIM_SAVE_ALL";
+        };
+
+        vim_show_tree: vim_show_tree {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp SPACE &kp E>;
+            label = "VIM_SHOW_TREE";
+        };
+
+        vim_cfdo_prefix: vim_cfdo_prefix {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Q) &kp COLON &kp C &kp F &kp D &kp O &kp SPACE &kp PRCNT &kp S &kp FSLH>;
+            label = "VIM_CFDO_PREFIX";
+        };
+
+        vim_vert_split: vim_vert_split {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp V>;
+            label = "VIM_VERT_SPLIT";
+        };
+
+        vim_hor_split: vim_hor_split {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp S>;
+            label = "VIM_HOR_SPLIT";
+        };
+
+        vim_close_split: vim_close_split {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp C>;
+            label = "VIM_CLOSE_SPLIT";
+        };
+
+        vim_split_nav_up: vim_split_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp K>;
+            label = "VIM_SPLIT_UP";
+        };
+
+        vim_split_nav_down: vim_split_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp J>;
+            label = "VIM_SPLIT_DOWN";
+        };
+
+        vim_split_nav_left: vim_slit_nav_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp H>;
+            label = "VIM_SLIT_NAV_LEFT";
+        };
+
+        vim_split_nav_right: vim_split_nav_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp L>;
+            label = "VIM_SPLIT_NAV_RIGHT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -51,7 +123,7 @@
 &kp ESC  &kp SINGLE_QUOTE  &kp COMMA     &kp PERIOD   &kp P          &kp Y    &kp F      &kp G        &kp C        &kp R         &kp L          &kp EQUAL
 &kp TAB  &bhm LSHIFT A     &bhm LCTRL O  &bhm LALT E  &bhm LGUI U    &kp I    &kp D      &bhm RGUI H  &bhm RALT T  &bhm RCTRL N  &bhm RSHIFT S  &kp MINUS
 &tdmod   &kp SEMICOLON     &kp Q         &kp J        &kp K          &kp X    &kp B      &kp M        &kp W        &kp V         &kp Z          &kp SLASH
-                                         &mo 1        &kp BACKSPACE  &mo 2    &kp ENTER  &kp SPACE    &mo 3
+                                         &mo 2        &kp BACKSPACE  &mo 1    &kp ENTER  &kp SPACE    &mo 3
             >;
         };
 
@@ -64,19 +136,19 @@
             //                                  |            |            |     | ## |       |      |      | 
 
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2           &kp NUMBER_3           &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7    &kp N8         &kp N9     &kp N0     &kp LS(LA(NUMBER_2))
-&trans  &kp LSHIFT    &bhm LCTRL LEFT_BRACE  &bhm LALT RIGHT_BRACE  &kp LEFT_GUI  &trans    &trans        &kp RGUI  &kp RIGHT_ALT  &kp RCTRL  &kp RSHFT  &kp GRAVE
-&trans  &trans        &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans        &trans    &trans        &trans    &trans         &trans     &trans     &kp BACKSLASH
-                                             &trans                 &trans        &trans    &trans        &trans    &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2           &kp NUMBER_3           &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7          &kp N8                &kp N9                &kp N0          &kp LS(LA(NUMBER_2))
+&trans  &kp LSHIFT    &bhm LCTRL LEFT_BRACE  &bhm LALT RIGHT_BRACE  &kp LEFT_GUI  &trans    &trans        &bhm RGUI HOME  &bhm RIGHT_ALT PG_UP  &bhm RCTRL PAGE_DOWN  &bhm RSHFT END  &kp GRAVE
+&trans  &trans        &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans        &trans    &trans        &kp LEFT        &kp UP_ARROW          &kp DOWN              &kp RIGHT       &kp BACKSLASH
+                                             &trans                 &trans        &trans    &trans        &trans          &trans
             >;
         };
 
         fmov {
             bindings = <
-&trans  &kp LEFT_ARROW    &kp UP_ARROW             &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans    &kt F1        &kp F2        &kp F3         &kp F4          &kp F5   &kp F6
-&trans  &bhm LSHIFT HOME  &bhm LEFT_CONTROL PG_UP  &bhm LALT PAGE_DOWN  &bhm LGUI END    &trans    &bhm RGUI F7  &bhm RALT F8  &bhm RCTRL F9  &bhm RSHFT F10  &kp F11  &kp F12
-&trans  &kp H             &kp K                    &kp J                &kp L            &trans    &kp F13       &kp F14       &kp F15        &kp F16         &kp F17  &kp F18
-                                                   &trans               &trans           &trans    &trans        &trans        &trans
+&trans  &vim_cfdo_prefix     &vim_close_split   &vim_vert_split      &vim_hor_split        &vim_save_all     &kt F1        &kp F2        &kp F3         &kp F4          &kp F5   &kp F6
+&trans  &kp LSHIFT           &kp LEFT_CONTROL   &kp LALT             &kp LGUI              &vim_show_tree    &bhm RGUI F7  &bhm RALT F8  &bhm RCTRL F9  &bhm RSHFT F10  &kp F11  &kp F12
+&trans  &vim_split_nav_left  &vim_split_nav_up  &vim_split_nav_down  &vim_split_nav_right  &trans            &kp F13       &kp F14       &kp F15        &kp F16         &kp F17  &kp F18
+                                                &trans               &trans                &trans            &trans        &trans        &trans
             >;
         };
 
