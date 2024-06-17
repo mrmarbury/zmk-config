@@ -41,7 +41,7 @@
         vim_save_all: vim_save_all {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp COLON &kp W &kp A &kp EXCL &kp RS(ENTER)>;
+            bindings = <&kp ESCAPE &kp COLON &kp W &kp A &kp EXCL &kp ENTER>;
             label = "VIM_SAVE_ALL";
         };
 
@@ -64,6 +64,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(W) &kp V>;
             label = "VIM_VERT_SPLIT";
+            tap-ms = <0>;
         };
 
         vim_hor_split: vim_hor_split {
@@ -120,10 +121,10 @@
             //                            | MO(2)   | MO(1)   | BSP | ## | ENT |  SPC     | MO(3)   |
 
             bindings = <
-&kp ESC  &kp SINGLE_QUOTE  &kp COMMA     &kp PERIOD   &kp P          &kp Y    &kp F      &kp G        &kp C        &kp R         &kp L          &kp EQUAL
-&kp TAB  &bhm LSHIFT A     &bhm LCTRL O  &bhm LALT E  &bhm LGUI U    &kp I    &kp D      &bhm RGUI H  &bhm RALT T  &bhm RCTRL N  &bhm RSHIFT S  &kp MINUS
-&tdmod   &kp SEMICOLON     &kp Q         &kp J        &kp K          &kp X    &kp B      &kp M        &kp W        &kp V         &kp Z          &kp SLASH
-                                         &mo 2        &kp BACKSPACE  &mo 1    &kp ENTER  &kp SPACE    &mo 3
+&kp ESC  &kp SINGLE_QUOTE  &kp COMMA        &kp PERIOD         &kp P          &kp Y    &kp F      &kp G        &kp C         &kp R             &kp L         &kp EQUAL
+&kp TAB  &bhm LCTRL A      &bhm LEFT_ALT O  &bhm LEFT_SHIFT E  &bhm LGUI U    &kp I    &kp D      &bhm RGUI H  &bhm RSHFT T  &bhm RIGHT_ALT N  &bhm RCTRL S  &kp MINUS
+&tdmod   &kp SEMICOLON     &kp Q            &kp J              &kp K          &kp X    &kp B      &kp M        &kp W         &kp V             &kp Z         &kp SLASH
+                                            &mo 2              &kp BACKSPACE  &mo 1    &kp ENTER  &kp SPACE    &mo 3
             >;
         };
 
@@ -136,19 +137,19 @@
             //                                  |            |            |     | ## |       |      |      | 
 
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2           &kp NUMBER_3           &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7          &kp N8                &kp N9                &kp N0          &kp LS(LA(NUMBER_2))
-&trans  &kp LSHIFT    &bhm LCTRL LEFT_BRACE  &bhm LALT RIGHT_BRACE  &kp LEFT_GUI  &trans    &trans        &bhm RGUI HOME  &bhm RIGHT_ALT PG_UP  &bhm RCTRL PAGE_DOWN  &bhm RSHFT END  &kp GRAVE
-&trans  &trans        &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans        &trans    &trans        &kp LEFT        &kp UP_ARROW          &kp DOWN              &kp RIGHT       &kp BACKSLASH
-                                             &trans                 &trans        &trans    &trans        &trans          &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2              &kp NUMBER_3                 &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7          &kp N8                  &kp N9                    &kp N0          &kp LS(LA(NUMBER_2))
+&trans  &kp LCTRL     &bhm LEFT_ALT LEFT_BRACE  &bhm LEFT_SHIFT RIGHT_BRACE  &kp LEFT_GUI  &trans    &trans        &bhm RGUI HOME  &bhm RIGHT_SHIFT PG_UP  &bhm RIGHT_ALT PAGE_DOWN  &bhm RCTRL END  &kp GRAVE
+&trans  &trans        &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS        &trans        &trans    &trans        &kp LEFT        &kp UP_ARROW            &kp DOWN                  &kp RIGHT       &kp BACKSLASH
+                                                &trans                       &trans        &trans    &trans        &trans          &trans
             >;
         };
 
         fmov {
             bindings = <
-&trans  &vim_cfdo_prefix     &vim_close_split   &vim_vert_split      &vim_hor_split        &vim_save_all     &kt F1        &kp F2        &kp F3         &kp F4          &kp F5   &kp F6
-&trans  &kp LSHIFT           &kp LEFT_CONTROL   &kp LALT             &kp LGUI              &vim_show_tree    &bhm RGUI F7  &bhm RALT F8  &bhm RCTRL F9  &bhm RSHFT F10  &kp F11  &kp F12
-&trans  &vim_split_nav_left  &vim_split_nav_up  &vim_split_nav_down  &vim_split_nav_right  &trans            &kp F13       &kp F14       &kp F15        &kp F16         &kp F17  &kp F18
-                                                &trans               &trans                &trans            &trans        &trans        &trans
+&trans            &vim_close_split     &trans             &vim_vert_split      &vim_hor_split        &vim_save_all     &kt F1   &kp F2             &kp F3               &kp F4              &kp F5          &kp F6
+&vim_cfdo_prefix  &kp RCTRL            &kp LEFT_ALT       &kp LEFT_SHIFT       &kp LGUI              &vim_show_tree    &kp F7   &bhm RIGHT_GUI F8  &bhm RIGHT_SHIFT F9  &bhm RIGHT_ALT F10  &bhm RCTRL F11  &kp F12
+&trans            &vim_split_nav_left  &vim_split_nav_up  &vim_split_nav_down  &vim_split_nav_right  &trans            &kp F13  &kp F14            &kp F15              &kp F16             &kp F17         &kp F18
+                                                          &trans               &trans                &trans            &trans   &trans             &trans
             >;
         };
 
