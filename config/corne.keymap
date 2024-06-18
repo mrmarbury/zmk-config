@@ -146,8 +146,8 @@
 
         fmov {
             bindings = <
-&trans            &vim_close_split     &trans             &vim_vert_split      &vim_hor_split        &vim_save_all     &kt F1   &kp F2             &kp F3             &kp F4          &kp F5                &kp F6
-&vim_cfdo_prefix  &kp LEFT_SHIFT       &kp LCTRL          &kp LEFT_ALT         &kp LGUI              &vim_show_tree    &kp F7   &bhm RIGHT_GUI F8  &bhm RIGHT_ALT F9  &bhm RCTRL F10  &bhm RIGHT_SHIFT F11  &kp F12
+&trans            &vim_close_split     &trans             &vim_vert_split      &vim_hor_split        &none             &kt F1   &kp F2             &kp F3             &kp F4          &kp F5                &kp F6
+&vim_cfdo_prefix  &vim_save_all        &kp LCTRL          &kp LEFT_ALT         &kp LGUI              &vim_show_tree    &kp F7   &bhm RIGHT_GUI F8  &bhm RIGHT_ALT F9  &bhm RCTRL F10  &bhm RIGHT_SHIFT F11  &kp F12
 &trans            &vim_split_nav_left  &vim_split_nav_up  &vim_split_nav_down  &vim_split_nav_right  &trans            &kp F13  &kp F14            &kp F15            &kp F16         &kp F17               &kp F18
                                                           &trans               &trans                &trans            &trans   &trans             &trans
             >;
