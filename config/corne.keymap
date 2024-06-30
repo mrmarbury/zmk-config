@@ -23,7 +23,7 @@
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <190>;    // <---[[moderate duration]]
+            tapping-term-ms = <150>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -137,19 +137,19 @@
             //                                  |            |            |     | ## |       |      |      | 
 
             bindings = <
-&trans  &kp NUMBER_1    &kp NUMBER_2             &kp NUMBER_3                 &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7          &kp N8                &kp N9                &kp N0                &kp LS(LA(NUMBER_2))
-&trans  &kp LEFT_SHIFT  &bhm LCTRL LEFT_BRACKET  &bhm LEFT_ALT RIGHT_BRACKET  &kp LEFT_GUI  &trans    &trans        &bhm RGUI HOME  &bhm RIGHT_ALT PG_UP  &bhm RCTRL PAGE_DOWN  &bhm RIGHT_SHIFT END  &kp GRAVE
-&trans  &trans          &kp LEFT_PARENTHESIS     &kp RIGHT_PARENTHESIS        &trans        &trans    &trans        &kp LEFT        &kp UP_ARROW          &kp DOWN              &kp RIGHT             &kp BACKSLASH
-                                                 &trans                       &trans        &trans    &trans        &trans          &trans
+&trans  &kp NUMBER_1                      &kp NUMBER_2             &kp NUMBER_3                 &kp NUMBER_4                     &kp N5    &kp NUMBER_6  &kp N7    &kp N8                     &kp N9                  &kp N0           &kp LS(LA(NUMBER_2))
+&trans  &bhm LEFT_SHIFT LEFT_PARENTHESIS  &bhm LCTRL LEFT_BRACKET  &bhm LEFT_ALT RIGHT_BRACKET  &bhm LEFT_GUI RIGHT_PARENTHESIS  &trans    &trans        &kp RGUI  &bhm RIGHT_ALT LEFT_BRACE  &bhm RCTRL RIGHT_BRACE  &kp RIGHT_SHIFT  &kp GRAVE
+&trans  &kp LEFT_ARROW                    &kp UP_ARROW             &kp DOWN_ARROW               &kp RIGHT_ARROW                  &trans    &trans        &trans    &trans                     &trans                  &trans           &kp BACKSLASH
+                                                                   &trans                       &trans                           &trans    &trans        &trans    &trans
             >;
         };
 
         fmov {
             bindings = <
-&trans            &vim_close_split     &trans             &vim_vert_split      &vim_hor_split        &none             &kt F1   &kp F2             &kp F3             &kp F4          &kp F5                &kp F6
-&vim_cfdo_prefix  &vim_save_all        &kp LCTRL          &kp LEFT_ALT         &kp LGUI              &vim_show_tree    &kp F7   &bhm RIGHT_GUI F8  &bhm RIGHT_ALT F9  &bhm RCTRL F10  &bhm RIGHT_SHIFT F11  &kp F12
-&trans            &vim_split_nav_left  &vim_split_nav_up  &vim_split_nav_down  &vim_split_nav_right  &trans            &kp F13  &kp F14            &kp F15            &kp F16         &kp F17               &kp F18
-                                                          &trans               &trans                &trans            &trans   &trans             &trans
+&trans  &kp F1          &kp F2     &kp F3         &kp F4    &kp F5    &kt F6  &kp F7         &kp F8         &kp F9     &kp F10          &kp F11
+&trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT   &kp LGUI  &trans    &trans  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL  &kp RIGHT_SHIFT  &kp F12
+&trans  &kp HOME        &kp PG_UP  &kp PAGE_DOWN  &kp END   &trans    &trans  &trans         &trans         &trans     &trans           &trans
+                                   &trans         &trans    &trans    &trans  &trans         &trans
             >;
         };
 
