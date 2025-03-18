@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define DVK 0
@@ -121,10 +120,10 @@
             //                            | MO(2)   | MO(1)   | BSP | ## | ENT |  SPC     | MO(3)   |
 
             bindings = <
-&kp ESC  &kp SINGLE_QUOTE  &kp COMMA     &kp PERIOD   &kp P          &kp Y    &kp F      &kp G          &kp C        &kp R         &kp L        &kp EQUAL
-&kp TAB  &bhm LEFT_ALT A   &bhm LCTRL O  &bhm LGUI E  &bhm LSHFT U   &kp I    &kp D      &bhm RSHIFT H  &bhm RGUI T  &bhm RCTRL N  &bhm RALT S  &kp MINUS
-&tdmod   &kp SEMICOLON     &kp Q         &kp J        &kp K          &kp X    &kp B      &kp M          &kp W        &kp V         &kp Z        &kp SLASH
-                                         &mo 2        &kp BACKSPACE  &mo 1    &kp ENTER  &kp SPACE      &mo 3
+&kp ESC  &kp SINGLE_QUOTE  &kp COMMA     &kp PERIOD   &kp P          &kp Y    &kp F      &kp G        &kp C        &kp R         &kp L         &kp EQUAL
+&kp TAB  &bhm LSHIFT A     &bhm LCTRL O  &bhm LALT E  &bhm LGUI U    &kp I    &kp D      &bhm RCMD H  &bhm RALT T  &bhm RCTRL N  &bhm RSHFT S  &kp MINUS
+&tdmod   &kp SEMICOLON     &kp Q         &kp J        &kp K          &kp X    &kp B      &kp M        &kp W        &kp V         &kp Z         &kp SLASH
+                                         &mo 2        &kp BACKSPACE  &mo 1    &kp ENTER  &kp SPACE    &mo 3
             >;
         };
 
@@ -137,19 +136,19 @@
             //                                  |            |            |     | ## |       |      |      | 
 
             bindings = <
-&trans  &kp NUMBER_1                &kp NUMBER_2             &kp NUMBER_3             &kp NUMBER_4                   &kp N5    &kp NUMBER_6  &kp N7      &kp N8                &kp N9                  &kp N0         &kp LS(LA(NUMBER_2))
-&trans  &bhm LALT LEFT_PARENTHESIS  &bhm LCTRL LEFT_BRACKET  &bhm LGUI RIGHT_BRACKET  &bhm LSHIFT RIGHT_PARENTHESIS  &trans    &trans        &kp RSHIFT  &bhm RGUI LEFT_BRACE  &bhm RCTRL RIGHT_BRACE  &kp RIGHT_ALT  &kp GRAVE
-&trans  &kp LEFT_ARROW              &kp UP_ARROW             &kp DOWN_ARROW           &kp RIGHT_ARROW                &trans    &trans        &trans      &trans                &trans                  &trans         &kp BACKSLASH
-                                                             &trans                   &trans                         &trans    &trans        &trans      &trans
+&trans  &kp NUMBER_1                 &kp NUMBER_2             &kp NUMBER_3             &kp NUMBER_4                 &kp N5    &kp NUMBER_6  &kp N7    &kp N8                &kp N9                  &kp N0     &kp LS(LA(NUMBER_2))
+&trans  &bhm LSHFT LEFT_PARENTHESIS  &bhm LCTRL LEFT_BRACKET  &bhm LALT RIGHT_BRACKET  &bhm LCMD RIGHT_PARENTHESIS  &trans    &trans        &kp RCMD  &bhm RALT LEFT_BRACE  &bhm RCTRL RIGHT_BRACE  &kp RSHFT  &kp GRAVE
+&trans  &kp LEFT_ARROW               &kp UP_ARROW             &kp DOWN_ARROW           &kp RIGHT_ARROW              &trans    &trans        &trans    &trans                &trans                  &trans     &kp BACKSLASH
+                                                              &trans                   &trans                       &trans    &trans        &trans    &trans
             >;
         };
 
         fmov {
             bindings = <
-&trans  &kp F1        &kp F2     &kp F3         &kp F4      &kp F5    &kt F6  &kp F7      &kp F8    &kp F9     &kp F10        &kp F11
-&trans  &kp LEFT_ALT  &kp LCTRL  &kp LGUI       &kp LSHIFT  &trans    &trans  &kp RSHIFT  &kp RGUI  &kp RCTRL  &kp RIGHT_ALT  &kp F12
-&trans  &kp HOME      &kp PG_UP  &kp PAGE_DOWN  &kp END     &trans    &trans  &trans      &trans    &trans     &trans         &trans
-                                 &trans         &trans      &trans    &trans  &trans      &trans
+&trans  &kp F1     &kp F2     &kp F3         &kp F4    &kp F5    &kt F6  &kp F7    &kp F8    &kp F9     &kp F10    &kp F11
+&trans  &kp LSHFT  &kp LCTRL  &kp LALT       &kp LCMD  &trans    &trans  &kp RCMD  &kp RALT  &kp RCTRL  &kp RSHFT  &kp F12
+&trans  &kp HOME   &kp PG_UP  &kp PAGE_DOWN  &kp END   &trans    &trans  &trans    &trans    &trans     &trans     &trans
+                              &trans         &trans    &trans    &trans  &trans    &trans
             >;
         };
 
